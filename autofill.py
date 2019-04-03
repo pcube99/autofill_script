@@ -4,7 +4,7 @@ import shlex
 import re
 import numpy as np
 import time
-URL = "https://www.facebook.com/"
+URL = "https://www.spoj.com/register/"
 browser = webdriver.Firefox()
 browser.get(URL)
 content = browser.page_source
@@ -14,7 +14,7 @@ data_itr=0
 for t in soup.select('input'):
     html_dict = {}
     x = str(t).split(" ")
-    print(x)
+    #print(x)
     if(('type="text"' in str(t) or 'type="password"' in str(t) or 'type="email"' in str(t) ) and 'hidden="hidden"' not in str(t)):
         #print(str(t))
         #FIND IDS
@@ -47,7 +47,7 @@ for t in soup.select('input'):
         html_data.append(html_dict)
 
 
-print(html_data)
+#print(html_data)
 
 #DATA OF USER
 fname = "Pankil"
